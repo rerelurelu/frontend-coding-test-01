@@ -1,5 +1,3 @@
-import { FC } from 'react';
+import {FC} from "react";
 
-export const App: FC = () => {
-  return <h1>Population Change App</h1>;
-};
+export const App: FC = () => <h1>Population Change App</h1>;
