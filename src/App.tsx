@@ -1,3 +1,7 @@
 import { FC } from 'react';
+import { Home } from './pages/Home';
 
-export const App: FC = () => <h1>Population Change App</h1>;
+// Component
+export const App: FC = () => (
+  <Home />
+);
