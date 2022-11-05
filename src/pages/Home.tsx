@@ -1,7 +1,13 @@
 import { FC } from 'react';
-import { PrefSelectField } from '../components/molecules/PrefSelectField';
+import { PopulationGraphField } from '../components/organisms/PopulationGraphField';
+import { PrefSelectField } from '../components/organisms/PrefSelectField';
 
 // Component
-export const Home: FC = () => (
-    <PrefSelectField />
+export const Home: FC = () => {
+  return (
+    <>
+      <PrefSelectField />
+      <PopulationGraphField />
+    </>
   );
+};

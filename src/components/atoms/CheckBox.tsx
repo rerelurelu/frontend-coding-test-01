@@ -1,5 +1,9 @@
 import { ChangeEvent, FC, useState } from 'react';
+import { useRecoilState } from 'recoil';
 import styled, { css } from 'styled-components';
+import { checkedPrefsState } from '../../states/atoms/checkedPrefsState';
+import { selectedPrefState } from '../../states/atoms/selectedPrefState';
+import { uncheckedPrefState } from '../../states/atoms/uncheckedPrefState';
 import { Prefecture } from '../../type/types';
 
 /* Component style */
@@ -47,14 +51,26 @@ const StLabel = styled.label`
   width: fit-content;
 `;
 
-// Props
-type Props = Prefecture & {
-  handleOnChange: (prefCode: number, prefName: string, isChecked: boolean) => void;
-};
-
 // Component
-export const CheckBox: FC<Props> = ({ prefCode, prefName, handleOnChange }) => {
+export const CheckBox: FC<Prefecture> = ({ prefCode, prefName }) => {
   const [isChecked, setIsChecked] = useState(false);
+  const [checkedPrefs, setCheckedPrefs] = useRecoilState(checkedPrefsState);
+  const [, setSelectedPref] = useRecoilState(selectedPrefState);
+  const [, setUncheckedPref] = useRecoilState(uncheckedPrefState);
+
+  const handleOnChange = (checked: boolean) => {
+    setIsChecked(checked);
+    setSelectedPref({ prefCode, prefName });
+
+    if (checked) {
+      setCheckedPrefs([...checkedPrefs, { prefCode, prefName }]);
+      setUncheckedPref(null);
+    } else {
+      setCheckedPrefs(checkedPrefs.filter((pref: Prefecture) => pref.prefCode !== prefCode));
+      setUncheckedPref({ prefCode, prefName });
+      setSelectedPref(null);
+    }
+  };
 
   return (
     <StLabel htmlFor={`checkbox-${prefName}`}>
@@ -63,8 +79,7 @@ export const CheckBox: FC<Props> = ({ prefCode, prefName, handleOnChange }) => {
           name='Prefecture name'
           id={`checkbox-${prefName}`}
           onChange={(e: ChangeEvent<HTMLInputElement>) => {
-            handleOnChange(prefCode, prefName, e.target.checked);
-            setIsChecked(e.target.checked);
+            handleOnChange(e.target.checked);
           }}
         />
         <span>{prefName}</span>
