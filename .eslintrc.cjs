@@ -29,10 +29,13 @@ module.exports = {
   ignorePatterns: ['build'],
   rules: {
     'no-use-before-define': 'off',
+    'arrow-body-style': 'off',
     '@typescript-eslint/no-use-before-define': ["error"],
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
     'unused-imports/no-unused-imports': 'error',
+    'react-hooks/exhaustive-deps': 'off',
     'unused-imports/no-unused-vars': [
       'warn',
       { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
