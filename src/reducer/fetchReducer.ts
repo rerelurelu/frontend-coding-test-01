@@ -5,6 +5,7 @@ export const INITIAL_STATE = {
   isError: false,
 };
 
+// データの取得状況に応じてStateを変更させる処理
 export const fetchReducer = (state: FetchState, action: FetchAction) => {
   switch (action.type) {
     case FetchActionKind.FETCH_START:

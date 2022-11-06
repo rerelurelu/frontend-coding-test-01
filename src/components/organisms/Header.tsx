@@ -16,6 +16,7 @@ const StTitle = styled.h1`
   color: #222222;
 `;
 
+/* Component */
 export const Header: FC = () => {
   return (
     <StHeader>
