@@ -29,3 +29,27 @@ export type FetchState = {
   isLoading: boolean;
   isError: boolean;
 };
+
+export type ResponseData = {
+  data: {
+    result: {
+      data: [
+        {
+          data: [
+            { year: number; value: number },
+            { year: number; value: number },
+            { year: number; value: number },
+            { year: number; value: number },
+            { year: number; value: number },
+            { year: number; value: number },
+            { year: number; value: number },
+            { year: number; value: number },
+            { year: number; value: number },
+            { year: number; value: number },
+            { year: number; value: number }
+          ];
+        }
+      ];
+    };
+  };
+};
