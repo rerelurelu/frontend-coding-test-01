@@ -3,7 +3,7 @@ import { Header } from '../components/organisms/Header';
 import { PopulationGraphField } from '../components/organisms/PopulationGraphField';
 import { PrefSelectField } from '../components/organisms/PrefSelectField';
 
-// Component
+/* Component */
 export const Home: FC = () => {
   return (
     <>

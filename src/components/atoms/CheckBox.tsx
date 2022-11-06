@@ -51,7 +51,7 @@ const StSpan = styled.span`
   color: ${textColor};
 `;
 
-// Component
+/* Component */
 export const CheckBox: FC<Prefecture> = ({ prefCode, prefName }) => {
   const [isChecked, setIsChecked] = useState(false);
   const [checkedPrefs, setCheckedPrefs] = useRecoilState(checkedPrefsState);

@@ -13,6 +13,7 @@ type Props = {
   text: string;
 };
 
+/* Component */
 export const ErrorText: FC<Props> = ({ text }) => {
   return <StErrorText>{text}</StErrorText>;
 };
