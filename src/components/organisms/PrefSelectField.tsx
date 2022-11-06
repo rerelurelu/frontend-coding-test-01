@@ -12,6 +12,7 @@ import { SubTitle } from '../atoms/SubTitle';
 
 /* Component style */
 const Container = styled.div`
+  margin-top: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -24,6 +25,7 @@ const Box = styled.div`
   row-gap: 1rem;
   padding: 4px;
   max-width: ${size.sm};
+  margin-top: 2rem;
 
   @media ${device.tablet} {
     grid-template-columns: repeat(5, 1fr);
@@ -89,7 +91,7 @@ export const PrefSelectField: FC = () => {
 
   return (
     <Container>
-      <SubTitle subTitle='都道府県' />
+      <SubTitle subTitle='都道府県' ml='2rem' />
       {state.isError && <ErrorText text='都道府県データの取得に失敗しました😢' />}
       <Box>
         {state.isLoading && (

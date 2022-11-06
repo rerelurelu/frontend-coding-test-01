@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import { checkedPrefsState } from '../../states/atoms/checkedPrefsState';
 import { selectedPrefState } from '../../states/atoms/selectedPrefState';
 import { uncheckedPrefState } from '../../states/atoms/uncheckedPrefState';
+import { borderColor, checkedBgColor, hoverBgColor, textColor } from '../../theme/settings/color';
 import { Prefecture } from '../../type/types';
 
 /* Component style */
@@ -11,11 +12,6 @@ import { Prefecture } from '../../type/types';
 type BoxProps = {
   isChecked: boolean;
 };
-
-// Colors
-const borderColor = '#b0c4de';
-const hoverBgColor = '#b0c4de4d';
-const checkedBgColor = '#b0c4de66';
 
 // Components
 const StBox = styled.div<BoxProps>`
@@ -31,8 +27,8 @@ const StBox = styled.div<BoxProps>`
   border-radius: 99px;
   border: solid 1px ${borderColor};
   text-align: center;
-  padding: 4px 12px 4px 8px;
-  width: 90px;
+  padding: 4px 8px;
+  width: 100px;
 
   &:hover {
     cursor: pointer;
@@ -49,6 +45,10 @@ const StCheckBox = styled.input.attrs({ type: 'checkbox' })`
 
 const StLabel = styled.label`
   width: fit-content;
+`;
+
+const StSpan = styled.span`
+  color: ${textColor};
 `;
 
 // Component
@@ -82,7 +82,7 @@ export const CheckBox: FC<Prefecture> = ({ prefCode, prefName }) => {
             handleOnChange(e.target.checked);
           }}
         />
-        <span>{prefName}</span>
+        <StSpan>{prefName}</StSpan>
       </StBox>
     </StLabel>
   );

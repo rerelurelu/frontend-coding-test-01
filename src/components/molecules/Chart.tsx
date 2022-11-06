@@ -30,6 +30,7 @@ const Box = styled.div`
   width: 100vw;
   height: 450px;
   max-width: ${size.sm};
+  margin-top: 2rem;
 
   @media ${device.tablet} {
     max-width: ${size.md};
