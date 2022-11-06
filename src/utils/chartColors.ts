@@ -4,6 +4,5 @@ export const chartColors: string[] = [
   '#03AF7A',
   '#4DC4FF',
   '#F6AA00',
-  '#FFF100',
   '#990099',
 ];
