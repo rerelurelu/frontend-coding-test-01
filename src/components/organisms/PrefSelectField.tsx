@@ -80,6 +80,7 @@ export const PrefSelectField: FC = () => {
         if (res.data.statusCode) {
           dispatch({ type: FetchActionKind.FETCH_ERROR });
         } else {
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
           setPreFectures(res.data);
           dispatch({ type: FetchActionKind.FETCH_SUCCESS });
         }

@@ -32,6 +32,7 @@ const Box = styled.div`
   }
 `;
 
+/* Component */
 export const PopulationGraphField: FC = () => {
   return (
     <Container>

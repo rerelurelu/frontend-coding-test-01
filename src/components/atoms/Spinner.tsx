@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+/* Component */
 export const Spinner = styled.div`
   border: 12px solid lightblue;
   border-top: 12px lightskyblue solid;

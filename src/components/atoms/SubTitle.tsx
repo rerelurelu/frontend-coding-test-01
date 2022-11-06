@@ -26,15 +26,17 @@ export const StH2 = styled.h2<{ ml: string }>`
   }
 `;
 
-// Props
+/* Props */
 type SubTitleProps = {
   subTitle: string;
   ml: string;
 };
 
-// Component
-export const SubTitle: FC<SubTitleProps> = ({ subTitle, ml }) => (
-  <StH2 ml={ml}>
-    <span>{subTitle}</span>
-  </StH2>
-);
+/* Component */
+export const SubTitle: FC<SubTitleProps> = ({ subTitle, ml }) => {
+  return (
+    <StH2 ml={ml}>
+      <span>{subTitle}</span>
+    </StH2>
+  );
+};

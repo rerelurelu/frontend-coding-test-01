@@ -1,6 +1,7 @@
 import { PopulationData, Prefecture, ResponseData } from '../type/types';
 import { chartColors } from './chartColors';
 
+// グラフ描画用のデータに加工する処理
 export const createPopulationData = (
   res: ResponseData,
   selectedPref: Prefecture
