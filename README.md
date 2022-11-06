@@ -5,6 +5,7 @@
 ## 使用技術
 
 以下のサイトで確認できます。
+
 [StackShare](https://stackshare.io/zoniha/population-change-app#stack)
 
 ## 使い方
@@ -18,6 +19,7 @@ git clone https://github.com/zoniha/population-change-app
 <br />
 
 2. RESAS API の利用登録を行い、API キーを発行
+
    [RESAS のリンク](https://opendata.resas-portal.go.jp/)
    <br />
 
