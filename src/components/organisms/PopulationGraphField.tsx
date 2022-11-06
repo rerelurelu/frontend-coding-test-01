@@ -36,7 +36,7 @@ export const PopulationGraphField: FC = () => {
   return (
     <Container>
       <Box>
-        <SubTitle subTitle='人口推移グラフ' />
+        <SubTitle subTitle='人口推移グラフ' ml='0.5rem' />
         <Chart />
       </Box>
     </Container>
